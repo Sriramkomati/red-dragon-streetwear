@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RED DRAGON STREETWEAR | The Panjaa Edition</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #050505;
+      color: #ffffff;
+    }
+    .font-heading {
+      font-family: 'Oswald', sans-serif;
+    }
+    .text-brand-red {
+      color: #e50914;
+    }
+    .bg-brand-red {
+      background-color: #e50914;
+    }
+    .bg-brand-red:hover {
+      background-color: #b80710;
+    }
+    .border-brand-red {
+      border-color: #e50914;
+    }
+    /* Glow effect for product cards */
+    .product-glow {
+      background: radial-gradient(circle at center, rgba(229, 9, 20, 0.15) 0%, rgba(0,0,0,0) 70%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- TOP HEADER / NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center font-bold text-black font-heading text-xl">
+          🐲
+        </div>
+        <div>
+          <span class="block font-heading text-lg leading-none tracking-wider text-white">RED DRAGON</span>
+          <span class="block text-[10px] tracking-widest text-zinc-400 font-semibold">STREETWEAR</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-zinc-300">
+        <a href="#" class="text-brand-red">Home</a>
+        <a href="#shop" class="hover:text-white transition">Shop</a>
+        <a href="#" class="hover:text-white transition">About Us</a>
+        <a href="#" class="hover:text-white transition">Size Guide</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <!-- Right Utility Icons -->
+      <div class="flex items-center gap-5">
+        <button class="hover:text-brand-red transition"><i data-lucide="search" class="w-5 h-5"></i></button>
+        <button class="relative hover:text-brand-red transition">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span class="absolute -top-1.5 -right-2 bg-brand-red text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-zinc-950 overflow-hidden py-16 md:py-24 border-b border-zinc-900">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Hero Text -->
+      <div class="z-10">
+        <p class="text-brand-red text-xs font-bold uppercase tracking-widest mb-2">Red Dragon Streetwear</p>
+        <h1 class="font-heading text-6xl md:text-8xl font-bold uppercase tracking-tight leading-none mb-4">
+          THE PANJAA<br/><span class="text-brand-red">EDITION</span>
+        </h1>
+        <p class="text-zinc-400 font-semibold tracking-wide text-sm mb-6">
+          NOT JUST A TEE. <span class="text-brand-red">IT'S A STATEMENT.</span>
+        </p>
+
+        <!-- Feature Badges -->
+        <div class="grid grid-cols-3 gap-4 mb-8 text-xs">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-5 h-5 text-brand-red"></i>
+            <span class="text-zinc-300 font-medium">PREMIUM QUALITY</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="crown" class="w-5 h-5 text-brand-red"></i>
+            <span class="text-zinc-300 font-medium">LIMITED DROP EXCLUSIVE</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="flame" class="w-5 h-5 text-brand-red"></i>
+            <span class="text-zinc-300 font-medium">STREET BORN FEARLESS SOUL</span>
+          </div>
+        </div>
+
+        <a href="#shop" class="inline-flex items-center gap-2 bg-brand-red text-white text-xs font-bold tracking-widest px-8 py-4 rounded uppercase transition hover:gap-3">
+          Shop The Drop <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Right Hero Graphic -->
+      <div class="relative flex justify-center items-center">
+        <!-- Dragon Overlay Graphic (Simulated with background SVG/Glow) -->
+        <div class="absolute inset-0 bg-gradient-to-r from-red-900/20 to-transparent rounded-full blur-3xl"></div>
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop" 
+             alt="Panjaa Edition Hero" 
+             class="relative z-10 w-full max-w-md rounded-lg shadow-2xl object-cover border border-zinc-800" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COLLECTION SECTION -->
+  <section id="shop" class="max-w-7xl mx-auto px-6 py-16">
+    <div class="flex items-center justify-between mb-10">
+      <div>
+        <p class="text-brand-red text-xs font-bold uppercase tracking-widest">Limited Drop</p>
+        <h2 class="font-heading text-3xl font-bold uppercase tracking-wide">The Panjaa Collection</h2>
+      </div>
+      <a href="#" class="text-xs uppercase font-bold tracking-widest border border-zinc-800 px-4 py-2 hover:border-brand-red transition">View All</a>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Product 1 -->
+      <div class="bg-zinc-950 border border-zinc-900 rounded-lg p-4 flex flex-col justify-between hover:border-zinc-700 transition relative product-glow">
+        <span class="absolute top-6 left-6 bg-brand-red text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">New</span>
+        <div class="h-80 flex items-center justify-center my-4 overflow-hidden rounded">
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=500&auto=format&fit=crop" alt="Panjaa Edition 01" class="object-cover h-full w-full rounded hover:scale-105 transition duration-300" />
+        </div>
+        <div>
+          <h3 class="font-heading text-lg font-bold uppercase tracking-wide">Panjaa Edition 01</h3>
+          <p class="text-xs text-zinc-500 uppercase font-semibold mb-2">Oversized Tee</p>
+          <p class="text-brand-red font-bold text-lg mb-4">₹300</p>
+          
+          <!-- Size Selector -->
+          <div class="flex gap-2 mb-4">
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">S</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">M</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">L</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">XL</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">XXL</button>
+          </div>
+          
+          <button class="w-full bg-brand-red text-white py-3 font-bold text-xs uppercase tracking-wider rounded flex items-center justify-center gap-2">
+            Add To Cart <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-zinc-950 border border-zinc-900 rounded-lg p-4 flex flex-col justify-between hover:border-zinc-700 transition relative product-glow">
+        <span class="absolute top-6 left-6 bg-brand-red text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">New</span>
+        <div class="h-80 flex items-center justify-center my-4 overflow-hidden rounded">
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=500&auto=format&fit=crop" alt="Panjaa Edition 02" class="object-cover h-full w-full rounded hover:scale-105 transition duration-300" />
+        </div>
+        <div>
+          <h3 class="font-heading text-lg font-bold uppercase tracking-wide">Panjaa Edition 02</h3>
+          <p class="text-xs text-zinc-500 uppercase font-semibold mb-2">Oversized Tee</p>
+          <p class="text-brand-red font-bold text-lg mb-4">₹300</p>
+          
+          <div class="flex gap-2 mb-4">
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">S</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">M</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">L</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">XL</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">XXL</button>
+          </div>
+          
+          <button class="w-full bg-brand-red text-white py-3 font-bold text-xs uppercase tracking-wider rounded flex items-center justify-center gap-2">
+            Add To Cart <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-zinc-950 border border-zinc-900 rounded-lg p-4 flex flex-col justify-between hover:border-zinc-700 transition relative product-glow">
+        <span class="absolute top-6 left-6 bg-brand-red text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">New</span>
+        <div class="h-80 flex items-center justify-center my-4 overflow-hidden rounded">
+          <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=500&auto=format&fit=crop" alt="Panjaa Edition 03" class="object-cover h-full w-full rounded hover:scale-105 transition duration-300" />
+        </div>
+        <div>
+          <h3 class="font-heading text-lg font-bold uppercase tracking-wide">Panjaa Edition 03</h3>
+          <p class="text-xs text-zinc-500 uppercase font-semibold mb-2">Oversized Tee</p>
+          <p class="text-brand-red font-bold text-lg mb-4">₹300</p>
+          
+          <div class="flex gap-2 mb-4">
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">S</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">M</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">L</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">XL</button>
+            <button class="w-8 h-8 text-xs font-bold border border-zinc-800 hover:border-brand-red rounded flex items-center justify-center">XXL</button>
+          </div>
+          
+          <button class="w-full bg-brand-red text-white py-3 font-bold text-xs uppercase tracking-wider rounded flex items-center justify-center gap-2">
+            Add To Cart <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES BAR -->
+  <section class="bg-zinc-950 border-y border-zinc-900 py-8 my-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="flex flex-col items-center">
+        <i data-lucide="truck" class="w-6 h-6 text-brand-red mb-2"></i>
+        <h4 class="font-bold text-xs uppercase">Fast Delivery</h4>
+        <p class="text-[11px] text-zinc-500">Pan India Shipping</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <i data-lucide="shield-check" class="w-6 h-6 text-brand-red mb-2"></i>
+        <h4 class="font-bold text-xs uppercase">Secure Payment</h4>
+        <p class="text-[11px] text-zinc-500">100% Safe & Secure</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <i data-lucide="award" class="w-6 h-6 text-brand-red mb-2"></i>
+        <h4 class="font-bold text-xs uppercase">Premium Quality</h4>
+        <p class="text-[11px] text-zinc-500">240 GSM Cotton</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <i data-lucide="headphones" class="w-6 h-6 text-brand-red mb-2"></i>
+        <h4 class="font-bold text-xs uppercase">24/7 Support</h4>
+        <p class="text-[11px] text-zinc-500">We're Here To Help</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black pt-12 pb-6 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      
+      <!-- Brand Info -->
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center font-bold text-black font-heading text-sm">🐲</div>
+          <span class="font-heading text-md font-bold tracking-wider">RED DRAGON</span>
+        </div>
+        <p class="text-xs text-zinc-400 mb-4">Streetwear for the fearless.<br/>Not just a tee. It's a statement.</p>
+        <div class="flex gap-3 text-zinc-400">
+          <a href="#" class="hover:text-brand-red"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" class="hover:text-brand-red"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+          <a href="#" class="hover:text-brand-red"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h5 class="text-xs font-bold uppercase tracking-wider mb-4 text-white">Quick Links</h5>
+        <ul class="space-y-2 text-xs text-zinc-400">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Shop</a></li>
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Size Guide</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Care -->
+      <div>
+        <h5 class="text-xs font-bold uppercase tracking-wider mb-4 text-white">Customer Care</h5>
+        <ul class="space-y-2 text-xs text-zinc-400">
+          <li><a href="#" class="hover:text-white">Shipping Policy</a></li>
+          <li><a href="#" class="hover:text-white">Return Policy</a></li>
+          <li><a href="#" class="hover:text-white">FAQ</a></li>
+          <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h5 class="text-xs font-bold uppercase tracking-wider mb-2 text-white">Newsletter</h5>
+        <p class="text-xs text-zinc-400 mb-4">Stay updated on new drops and exclusive offers.</p>
+        <form class="flex">
+          <input type="email" placeholder="Enter your email" class="bg-zinc-900 border border-zinc-800 text-xs px-3 py-2 text-white focus:outline-none focus:border-brand-red flex-1 rounded-l" />
+          <button type="submit" class="bg-brand-red text-white px-3 py-2 rounded-r flex items-center justify-center">
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 border-t border-zinc-900 pt-6 text-center text-[11px] text-zinc-600">
+      &copy; 2024 Red Dragon Streetwear. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
